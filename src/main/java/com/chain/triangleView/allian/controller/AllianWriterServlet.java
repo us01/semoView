@@ -33,11 +33,7 @@ public class AllianWriterServlet extends HttpServlet {
 		String allianLink = request.getParameter("coorLink");
 		int allianWriter = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		int rwNo = Integer.parseInt(request.getParameter("rwNo"));
-		
-		System.out.println("제휴시작일자:" + allianStartDate);
-		System.out.println("제휴마감날짜:" + allianEndDate);
-		System.out.println("제휴 유저넘버 :" + allianWriter);
-		System.out.println("제휴링크 :" + allianLink);
+
 		int result[] = {0,0,0};
 		
 		//sql date 형식으로 형변환
@@ -54,22 +50,18 @@ public class AllianWriterServlet extends HttpServlet {
 		a.setCoorLink(allianLink);
 		
 		result = new AllianService().insertAllianService(a,rwNo);
-		System.out.println("result값은 뭐가되었니??" + result);
 		
 		String page = "";
 		
 		if(result[0] > 0){
 			page = "views/pay/AllianPayMent.jsp";
-			//page = "views/pay/PayMent.jsp";
 			request.setAttribute("serviceNo", result[1]);
 			request.setAttribute("allianCode", result[2]);
 			request.setAttribute("rwNo", rwNo);
 			request.setAttribute("allianLink", allianLink);
-		}else{
-			System.out.println("페이지 이동에 실패했습니다");
-			System.out.println(result);
 		}
-			request.getRequestDispatcher(page).forward(request, response);
+		
+		request.getRequestDispatcher(page).forward(request, response);
 		
 	}
 

@@ -104,10 +104,12 @@ border-left: 2px solid transparent;
 </style>
 <script>
 $(function(){
-	var level = <%=loginUser.getUserLevel()%>;
-	if(level == 1){
-		$('#checking').css('display','none');
-	}
+	<% if(loginUser != null){ %>
+		var level = <%=loginUser.getUserLevel()%>;
+		if(level == 1){
+			$('#checking').css('display','none');
+		}
+	<% } %>
 })
 </script>
 

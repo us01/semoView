@@ -44,6 +44,7 @@ public class ReviewDao {
 		String query = prop.getProperty("logoutMainHotListSelect");
 		try {
 			stmt = con.createStatement();
+			
 			rset = stmt.executeQuery(query);
 
 			reviewList = new ArrayList<Review>();
@@ -529,7 +530,6 @@ public class ReviewDao {
 
 		try {
 			pstmt = con.prepareStatement(query);
-			System.out.println(resultHash);
 			pstmt.setString(1, resultHash);
 			pstmt.setInt(2, rwNoCheck.getRwNo());
 
@@ -545,31 +545,28 @@ public class ReviewDao {
 	}
 
 	public Review reviewNoCheck(Connection con, Member m) {
-		PreparedStatement pstmt = null;
+		Statement stmt = null;
 		ResultSet rset = null;
 		Review rwResult = null;
 
 		String query = prop.getProperty("reviewNoCheck");
 		try {
-			pstmt = con.prepareStatement(query);
+			stmt = con.prepareStatement(query);
 
-			pstmt.setInt(1, m.getUserNo());
-
-			rset = pstmt.executeQuery();
+			rset = stmt.executeQuery(query);
 
 			if(rset.next()){
 				rwResult = new Review();
 
-				rwResult.setRwNo(rset.getInt("rwNo"));
+				rwResult.setRwNo(rset.getInt("currval"));
 			}
 
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally{
-			close(pstmt);
 			close(rset);
+			close(stmt);
 		}
 
 		return rwResult;

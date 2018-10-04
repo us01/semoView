@@ -33,11 +33,7 @@ public class write3SelectServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int rwNo = Integer.parseInt(request.getParameter("rwNo"));
 		
-		/*int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();*/
-		
 		HashMap<String, Object> hmap = new ReviewService().write3Select(rwNo);
-		
-		//System.out.println(hmap);
 		
 		Review rw = (Review)hmap.get("review");
 		ArrayList<CardFormImages> fileList = (ArrayList<CardFormImages>)hmap.get("CardFormImages");
@@ -48,13 +44,7 @@ public class write3SelectServlet extends HttpServlet {
 			request.setAttribute("rw", rw);
 			request.setAttribute("fileList", fileList);
 			request.getRequestDispatcher("views/writeForm/write3Update.jsp").forward(request, response);
-		}else{
-			page="views/errorPage/errorPage.jsp";
-			request.setAttribute("msg", "회원정보 변경 실패");
 		}
-		//response.sendRedirect(page);
-		/*RequestDispatcher view = request.getRequestDispatcher(page);
-		view.forward(request, response);*/
 		
 	}
 
