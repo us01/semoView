@@ -94,14 +94,14 @@ span {
                <span class="imageSpan">프로필 이미지</span> 
                <input type='file' id="imgInput" name="imgInput" accept="image/gif, image/jpeg, image/png" style="visibility: hidden;" /> 
                <label for="imgInput" class="ico_test1" id="icon_test1">
-               <img class="profileOut" id="image_section" src="<%=request.getContextPath()%>/thumbnail_upload/<%=loginUser.getThumbnail() %>"  />
+               <img class="profileOut" id="image_section" src="<%=request.getContextPath()%>/profileImg_upload/<%=loginUser.getThumbnail() %>"  />
                </label>
          </div>
        
 
          <div class="nickName" id="nickname" style="display: inline-block; width: 800px;">
            	<span class="showNick" style="background-color: white; color:black;">닉네임</span>
-               <input type="text" class="" id="nick" name="nick" style="width:500px;" value="<%=loginUser.getNick()%>"> 
+               <input type="text" class="" id="nick" name="nick" style="width:500px;" value="<%=loginUser.getNick()%>" maxlength="8"> 
 			<input type="button" class="btn-success" id="nickCheck" value="중복검사" ></input>
                <br><label id="nickResult"></label>
          </div>
@@ -116,8 +116,8 @@ span {
          <div class="" style="display: inline-block; width: 800px;">
                <span class="" style="background-color: white; color:black;">나이</span>
             <div style="text-align: center; display: inline-block;">
-               <input type="text" class="" id="age" value="<%=loginUser.getPhone()%>"
-               name="age" placeholder="만 나이를 입력해주세요" style="width:500px; margin-top: 20px; margin-left:26px;" maxlength="3">
+               <input type="text" class="" id="age" value="<%=loginUser.getAge()%>"
+               name="age" placeholder="만 나이를 입력해주세요" style="width:500px; margin-top: 20px; margin-left:26px;" maxlength="2">
             </div>
          </div>
 
@@ -136,20 +136,6 @@ span {
             <br><span id="guide" style="color: #999"></span><br/>
          </div>
 
-
-<!--          <div class="" style="margin-top: 10px; height:40px; display: inline-block;">
-               <span class="" style="background-color: white; color:black;">관심사</span>
-            <input type="checkbox" class="" name="category" value="1">자유
-            <input type="checkbox" class="" name="category" value="2">IT/가전
-            <input type="checkbox" class="" name="category" value="3">음악
-            <input type="checkbox" class="" name="category" value="4">뷰티 
-            <input type="checkbox" class="" name="category" value="5">스포츠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="checkbox" class="" name="category" value="6">금융 
-            <input type="checkbox" class="" name="category" value="7">게임
-            <input type="checkbox" class="" name="category" value="8">취미 
-            <input type="checkbox" class="" name="category" value="9">인생 
-            
-         </div> -->
 
          <div class="" style="margin-top:30px; display: inline-block; width:800px;">
                <span class="" style="background-color: white; color:black;margin-top: -20px; ">자기소개</span>

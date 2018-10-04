@@ -63,38 +63,38 @@ public class SearchCompanyServlet extends HttpServlet {
 			company = new CompanyService().searchUserNo(searchWord);
 			map.put("company", company);
 			map.put("searchWord", searchWord);
-			
+			map.put("option",option);
 		}else if(option.equals("userid")){
 			
 		
 		 company = new CompanyService().searchUserId(searchWord);
 		 map.put("company", company);
 		 map.put("searchWord", searchWord);
-		 
+		 map.put("option",option);
 		}else if(option.equals("comName")){
 			
 			company = new CompanyService().searchcopName(searchWord);
 			map.put("company", company);
 			map.put("searchWord", searchWord);
-			
+			map.put("option",option);
 		}else if(option.equals("pName")){
 			
 			company = new CompanyService().searchpName(searchWord);
 			map.put("company", company);
 			map.put("searchWord", searchWord);
-			
+			map.put("option",option);
 		}else if(option.equals("noCode")){
 			
 			company = new CompanyService().searchnoCode(searchWord);
 			map.put("company", company);
 			map.put("searchWord", searchWord);
-			
+			map.put("option",option);
 		}else if(option.equals("phone")){
 			
 			company = new CompanyService().searchphone(searchWord);
 			map.put("company", company);
 			map.put("searchWord", searchWord);
-			
+			map.put("option",option);
 		}else if(option.equals("enroll_date")){
 			
 			company = new CompanyService().searchEnrolldate(searchWord);
@@ -136,13 +136,14 @@ public class SearchCompanyServlet extends HttpServlet {
 			
 			map.put("pi", pi);
 			map.put("company",company);
-			map.put("searchWord", searchWord);
+			map.put("searchWord","");
+			map.put("option",option);
 			
 			
 			
 		}
 		
-	
+		map.put("searchWord", searchWord);
 		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");

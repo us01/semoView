@@ -551,38 +551,46 @@ a {
 					console.log(data.searchWord);
 					
 					$("#pageBtn").empty();
-					 if(data.pi.maxPage!=0){
-			               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"','"+searchWord+"')>");
-			               $Btn1.append("<<");
-			               $("#pageBtn").append($Btn1);
-			               if(data.pi.currentPage <= 1){ 
-			                  $Btn2  = $("<button class='btn' disabled>");    
-			               }else{
-			                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"','"+searchWord+"')>");
-			               
-			               }
-			               $Btn2.append("<");
-			               $("#pageBtn").append($Btn2);
-			               for(var p = data.pi.startPage; p <= data.pi.endPage; p++){ 
-			                  if(p == data.pi.currentPage){
-			                     $page = $("<button class='btn' disabled>");
-			                   }else{
-			                      $page = $("<button class='btn' onclick=a("+p+",'"+data.option+"','"+searchWord+"')>");
-			                  } 
-			                  $page.append(p);
-			                  $("#pageBtn").append($page);
-			               }          
-			               
-			               if(data.pi.currentPage >= data.pi.maxPage){ 
-			                  $Btn3 = $("<button class='btn' disabled>");
-			               }else{ 
-			                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"','"+searchWord+"')>");
-			               } 
-			               $Btn3.append(">");
-			               $("#pageBtn").append($Btn3);
-			               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"','"+searchWord+"')>");
-			               $Btn4.append(">>");
-			               $("#pageBtn").append($Btn4);
+					
+					
+		               
+		               if(data.pi.maxPage!=0){
+		               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"','"+data.searchWord+"')>");
+		               $Btn1.append("<<");
+		               $("#pageBtn").append($Btn1);
+		               
+		               
+		               if(data.pi.currentPage <= 1){ 
+		                  $Btn2  = $("<button class='btn' disabled>");    
+		               }else{
+		                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"','"+data.searchWord+"')>");
+		               }
+		               }
+		               $Btn2.append("<");
+		               $("#pageBtn").append($Btn2);
+		               
+		               for(var p = data.pi.startPage; p <= data.pi.endPage; p++){ 
+		                  if(p == data.pi.currentPage){
+		                     $page = $("<button class='btn' disabled>");
+		                   }else{
+		                      $page = $("<button class='btn' onclick=a("+p+",'"+data.option+"','"+data.searchWord+"')>");
+		                  } 
+		                  $page.append(p);
+		                  $("#pageBtn").append($page);
+		               }          
+		               
+		               if(data.pi.currentPage >= data.pi.maxPage){ 
+		                  $Btn3 = $("<button class='btn' disabled>");
+		               }else{ 
+		                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"','"+data.searchWord+"')>");
+		               } 
+		               $Btn3.append(">");
+		               $("#pageBtn").append($Btn3);
+		               
+		               
+		               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"','"+data.searchWord+"')>");
+		               $Btn4.append(">>");
+		               $("#pageBtn").append($Btn4);
 
 		               
 		               
