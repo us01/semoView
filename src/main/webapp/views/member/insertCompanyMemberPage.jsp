@@ -213,7 +213,7 @@ p{
          <div class="w3-container" id="nickname">
             <p><span class="tag" style="background-color: white; color:black;margin-top: 20px; margin-left:-10px">닉네임</span></p>
             <div class="input-group" style="text-align: center; width:600px;">
-               <input type="text" class="w3-input w3-change" id="nick" name="nick" 
+               <input type="text" class="w3-input w3-change" id="nick" name="nick" maxlength="8"
                   placeholder="닉네임을 입력해 주세요" style="width:270px; margin-left: -126px; margin-top: 3px; display: inline-block;"> 
 			<input type="button" class="btn-success" id="nickCheck" value="중복검사" style="margin-top: -36px; margin-left: 441px;"></input>
                <label id="nickResult"></label>

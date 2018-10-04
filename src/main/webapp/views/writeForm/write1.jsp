@@ -408,6 +408,8 @@ $(function(){
 	        theForm.introduce.focus();
 	        return false;
 		} else{
+			
+			$('#end').attr("disabled", false); 
 			var write1Test= document.getElementById("write1Test");
 	        write1Test.action = "<%=request.getContextPath()%>/insertWrite1.bo";
 	        write1Test.submit();
@@ -612,7 +614,7 @@ $(function(){
     					<input type="radio" name="star-input" id="p10" value="10"><label for="p10">5</label>
   					</span>
   					 <output for="star-input" style="display:none"><b id="reresult" style="display:none">0</b>점</output>
-  				<input type="text" id="starPoint" name="rwGrade" style="width: 100px; height:20px; display:none;" value="" >
+  				<input type="text" id="starPoint" name="rwGrade" style="width: 100px; height:20px; display:none;" value="0" >
 			</span>
 		</div>
 		
@@ -661,7 +663,7 @@ $(function(){
 
 			<div class="container2" style="height: 50px; display: -webkit-inline-box;">
 				<div class="btn-holder" style="    margin-left: 50px;">
-					<button type="submit" class="subButton" id="end" onclick="submitAction();" style="width:350px; height: 35px;"> 
+					<button type="submit" class="subButton" id="end" onclick="submitAction();" disabled="disabled" style="width:350px; height: 35px;"> 
 						게시물 작성
 					</button>
 					<button type="reset" class="subButton" onclick="goBack()"  style="width:350px; height: 35px; margin-left: 100px;">
@@ -672,7 +674,8 @@ $(function(){
 
 		<script>
 		function goBack(){
-			location.href="/triangleView/loginMain";
+			 location.href="/triangleView/loginMain"; 
+
 		}
 		</script>
 
