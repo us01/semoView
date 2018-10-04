@@ -27,7 +27,6 @@ public class LoadAllainFormServlet extends HttpServlet {
 		int userNo = Integer.parseInt(request.getParameter("userNo"));
 				
 		System.out.println("userNo" + userNo);
-			
 	}
 
 	/**

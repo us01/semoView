@@ -277,7 +277,7 @@
    		position: fixed;
    		left: 50%;
    		margin-left:-500px;
-    	top: 110px;
+    	top: 80px;
 	}
 	@media all and (max-width:768px) {
 		.centents {

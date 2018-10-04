@@ -180,9 +180,9 @@
 								var $viewMainImage;
 								
 								<% if(loginUser != null){ %>
-								$viewMainImage = $('<div class="viewMainImage" onclick=loadReivewForm(' + data.reviews[i].rwNo + ',' + data.reviews[i].rwContentType + ',' + <%= loginUser.getUserNo() %> +')>');
+									$viewMainImage = $('<div class="viewMainImage" onclick=loadReivewForm(' + data.reviews[i].rwNo + ',' + data.reviews[i].rwContentType + ',' + <%= loginUser.getUserNo() %> +')>');
 								<% }else{ %>
-								$viewMainImage = $('<div class="viewMainImage" onclick=loadReivewForm(' + data.reviews[i].rwNo + ',' + data.reviews[i].rwContentType + ',' + '-1)>');
+									$viewMainImage = $('<div class="viewMainImage" onclick=loadReivewForm(' + data.reviews[i].rwNo + ',' + data.reviews[i].rwContentType + ',' + '-1)>');
 								<% } %>
 								
 								$mainImage = $('<img>');

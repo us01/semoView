@@ -233,8 +233,8 @@
 							$img.attr('src', '/triangleView/img/category/inCategory<%= i %>.png');
 							
 							$div.append($img);
-						}	
-					}	
+						}
+					}
 				<% } %>
 				
 				<%for (int i = 1; i < 10; i++) {%>

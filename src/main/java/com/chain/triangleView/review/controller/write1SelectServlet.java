@@ -35,13 +35,9 @@ public class write1SelectServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int rwNo = Integer.parseInt(request.getParameter("rwNo"));
-		
-		/*int userNo = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();*/
-		
+
 		HashMap<String, Object> hmap = new ReviewService().write1Select(rwNo);
-		
-		System.out.println(hmap);
-		
+
 		Review rw = (Review)hmap.get("review");
 		ArrayList<CardFormImages> fileList = (ArrayList<CardFormImages>)hmap.get("CardFormImages");
 		
@@ -50,9 +46,6 @@ public class write1SelectServlet extends HttpServlet {
 			page="views/writeForm/write1Update.jsp";
 			request.setAttribute("rw", rw);
 			request.setAttribute("fileList", fileList);
-		}else{
-			page="views/errorPage/errorPage.jsp";
-			request.setAttribute("msg", "회원정보 변경 실패");
 		}
 		
 		RequestDispatcher view = request.getRequestDispatcher(page);
