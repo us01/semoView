@@ -1,0 +1,479 @@
+<style>
+	.modal{
+		text-align:center;
+	}
+	.review-Form {
+		display: inline-flex;
+		width:1080px;
+		margin:0 auto;
+	}
+	.contentArea {
+		width:717px;
+		height:517px;
+		background:white;
+		overflow:scroll;
+	}
+	.contentAreaOverflow {
+		width:700px;
+		height:500px;
+		overflow:hidden;
+	}
+	.contentInfoArea {
+		overflow:hidden;
+		position:relative;
+		width:300px;
+		height:500px;
+		background:white;
+		border-left:1px solid #E9EBEE;
+	}
+	.contentinfo-header{
+		width:300px;
+		height:52px;
+		padding:16px;
+		display:inline-flex;
+	}
+	.rwCommentArea {
+	
+	}
+	.contentinfo-comment {
+		width:318px;
+		height:285px;
+		overflow:hidden;
+		overflow-y:scroll;
+		border-top:1px solid #E9EBEE;
+	}
+	.parentComment-insertArea{
+		width:292px;
+		display:inline-flex;
+		margin-top:8px;
+		margin-bottom:3px;
+		padding-left:8px;
+	}
+	.childComment-insertArea{
+		width:230px;
+		display:inline-flex;
+		padding-right:8px;
+		margin-top:5px;
+		float:right;
+	}
+	.parentCommentArea {
+		display:inline-table;
+		padding-left:8px;
+		padding-right:8px;
+		padding-top:3px;
+		padding-bottom:3px;
+		margin-top: auto;
+    	margin-bottom: 5px;
+		max-width:220px;
+		background:#E9EBEE;
+		border-radius:15px;
+    	font-size:11px;
+	}
+	.childCommentArea {
+		display:inline-block;
+		padding-left:8px;
+		padding-right:8px;
+		padding-top:3px;
+		padding-bottom:3px;
+		max-width:182px;
+		background:#E9EBEE;
+		border-radius:15px;
+		margin-top: auto;
+    	margin-bottom: auto;
+    	font-size:11px;
+	}
+	.parentComment_Id {
+		font-size:12px;
+		font-weight:bold;
+		color:#365899;
+	}
+	.childComment_Id {
+		font-size:12px;
+		font-weight:bold;
+		color:#365899;
+	}
+	.childComment_apply {
+		display:block;
+		font-size:11px;
+		padding-left:7px;
+		color:#365899;
+	}
+	.parentComment_apply {
+		font-size:11px;
+		display:inline-block;
+		padding-left: 7px;
+		color:#365899;
+		float:left;
+	}
+	.profileImageArea {
+		width:33px;
+		height:33px;
+		overflow:hidden;
+		margin-top:10px;
+		margin-right:15px;
+	}
+	.reviewProfileImageArea {
+		width:50px;
+		height:50px;
+		border-radius:50%;
+		overflow:hidden;
+		margin-right:15px;
+	}
+	.parentCommentSubArea {
+		width:233px;
+	}
+	.parentCommentProfileImageArea {
+		width:40px;
+		height:40px;
+		border-radius:50%;
+		overflow:hidden;
+		margin-top: auto;
+    	margin-bottom: auto;
+		margin-right:10px;
+	}
+	.childCommentProfileImageArea {
+		width:25px;
+		height:25px;
+		border-radius:50%;
+		margin-top:auto;
+		margin-bottom:auto;
+		overflow:hidden;
+		margin-right:8px;
+	}
+	.childCommentInsertProfileImageArea {
+		width:25px;
+		height:25px;
+		border-radius:50%;
+		overflow:hidden;
+		margin-top:4px;
+		margin-left:10px;
+	}
+	.childCommentInsertProfileImageArea img{
+		width:25px;
+		height:25px;
+	}
+	.parentCommentInsertProfileImageArea {
+		width:33px;
+		height:33px;
+		border-radius:50%;
+		overflow:hidden;
+		margin-top:5px;
+		margin-left:10px;
+		margin-right:15px;
+	}
+	.parentCommentInsertProfileImageArea img{
+		width:33px;
+		height:33px;
+	}
+	.reviewProfileImageArea img{
+		width:50px;
+		height:50px;
+	}
+	.addchlidCommentArea {
+		display:none;
+	}
+	.parentCommentProfileImageArea img{
+		width:40px;
+		height:40px;
+	}
+	.childCommentProfileImageArea img{
+		width:25px;
+		height:25px;
+	}
+	.hashTagArea {
+		color:#003569;
+		font-size:12px;
+		width:283px;
+		padding-left:10px;
+    	padding-top:3px;
+	}
+	.reviewTitleArea {
+		width:232px;
+		text-align:left;
+		height:35px;
+		border-radius:18px;
+	}
+	.parentCommentInsertInputArea {
+		displya:inline;
+		margin-top:5px;
+		width:232px;
+		text-align:left;
+		height:35px;
+		border-radius:18px;
+		background:white;
+	}
+	.parentCommentInsert {
+		position:absolute;
+		background:#f2f3f5;
+		left:0px;
+		top: 455px;
+		width:300px;
+		height:45px;
+		display:flex;
+	}
+	.parentCommentInsertInputArea input{
+		vertical-align:middle;
+		border:none;
+		margin-left:15px;
+		margin-top:9px;
+		box-sizing:border-box;
+		height:15px;
+		outline:none;
+	}
+	.parentCommentInsertInputArea > input::placeholder {
+		font-size:12px;
+	}
+	.childCommentInsertInputArea > input::placeholder {
+		font-size:12px;
+	}
+	.childCommentInsertInputArea {
+		margin-top:4px;
+		margin-left:10px;
+		width:228px;
+		text-align:left;
+		height:25px;
+		border-radius:18px;
+		background:white;
+	}
+	.childCommentInsert {
+		margin-right:8px;
+		margin-bottom:5px;
+		background:#f2f3f5;
+		width:280px;
+		border-radius:15px;
+		height:33px;
+		display:flex;
+		float:right;
+	}
+	.childCommentInsertInputArea div {
+		display:inline;
+	}
+	.childCommentInsertInputArea input{
+		vertical-align:middle;
+		border:none;
+		margin-left:10px;
+		box-sizing:border-box;
+		outline:none;
+	}
+	.contentinfo-body {
+		width:300px;
+		display:table;
+	}
+	.reviewSideContent {
+		padding: 16px;
+		width:268px;
+		font-size:13px;
+		text-align:center;
+		color: #575757;
+		font-weight:bold;
+	}
+	.like-qty {
+		width:145px;
+		padding: 3px;
+		display:inline-block;
+		margin:0px;
+		padding-left:5px;
+		text-align:center;
+		font-size:12px;
+		color: #777D88;
+	}
+	.like-qty img{
+		width:35px;
+		height:30px;
+	}
+	.commentLoginInfoArea {
+		width:100%;
+		font-size:12px;
+		background:#f2f3f5;
+		height:46px;
+		text-align:center;
+		padding-top:15px;
+		color:#878787;
+	}
+	.comment-qty {
+		width:139px;
+		padding: 3px;
+		display:inline-block;
+		margin:0px;
+		padding-right:5px;
+		text-align:center;
+		font-size:12px;
+		color: #777D88;
+	}
+	.comment-qty img {
+		width:35px;
+		height:30px;
+	}
+	.reviewTitleArea P{
+		font-family:'맑은고딕';
+		margin-bottom:0px;
+		font-weight:unset;
+		margin-top:0px;
+	}
+	.reviewTitleArea P:first-child { 
+		display:inline-block;
+		font-size:15px;
+		font-weight:bold;
+		margin-top:4px;
+		width:219px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		text-align:left;
+	}
+	.reviewTitleArea P:nth-of-type(2) {
+		display:inline-block;
+		font-size:12px; 
+		text-align:left;
+		width:109px;
+		color: #575757;
+	}
+	
+	.reviewTitleArea P:nth-of-type(3) {
+		display:inline-block;
+		font-size:10px; 
+		text-align:right;
+		width:100px;
+		position: absolute;
+	}
+	.like-qty img:first-chlid {
+		cursor: pointer;
+	}
+	.subTopArea {
+		padding-bottom:10px;
+	}
+	.subTopArea p {
+		display:inline;
+		font-size:11px;
+		color: #FFFFA2;
+		user-select:none;
+	}
+	.subSideArea {
+		display:inline;
+		width:80px; 
+	}
+	.subSideArea button {
+		width: 70px;
+		background-color: #f8585b;
+		border: none;
+		color: #FDEBEC;
+		padding: 6px 0;
+		text-align: center;
+		text-decoration: none;
+		font-size: 14px;
+		margin: 4px;
+		cursor: pointer;
+		border-radius:5px;
+	}
+	.starArea {
+		width: 212px;
+    	text-align: right;
+	}
+	.star-input>.input, .star-input>.input>input:checked+label {
+		background-image: url("/triangleView/img/reviewForm/star.png");
+		background-repeat: no-repeat;
+	}
+	
+	.star-input>.input {
+		display: inline-block;
+		width: 80px;
+		background-size: 80px;
+		height: 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.star-input>.input>input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+	}
+	
+	.star-input>.input>label {
+		width: 8px;
+		height: 0;
+		padding: 15px 0 0 0;
+		overflow: hidden;
+		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.star-input>.input>input:checked+label {
+		background-size: 80px;
+		background-position: 0 bottom;
+	}
+	
+	.star-input>.input>label[for="star0"] {
+		width: 0px;
+		z-index: 0;
+	}
+	
+	.star-input>.input>label[for="star1"] {
+		width: 8px;
+		z-index: 10;
+	}
+	
+	.star-input>.input>label[for="star2"] {
+		width: 16px;
+		z-index: 9;
+	}
+	
+	.star-input>.input>label[for="star3"] {
+		width: 24px;
+		z-index: 8;
+	}
+	
+	.star-input>.input>label[for="star4"] {
+		width: 32px;
+		z-index: 7;
+	}
+	
+	.star-input>.input>label[for="star5"] {
+		width: 40px;
+		z-index: 6;
+	}
+	
+	.star-input>.input>label[for="star6"] {
+		width: 48px;
+		z-index: 5;
+	}
+	
+	.star-input>.input>label[for="star7"] {
+		width: 56px;
+		z-index: 4;
+	}
+	
+	.star-input>.input>label[for="star8"] {
+		width: 64px;
+		z-index: 3;
+	}
+	
+	.star-input>.input>label[for="star9"] {
+		width: 72px;
+		z-index: 2;
+	}
+	
+	.star-input>.input>label[for="star10"] {
+		width: 80px;
+		z-index: 1;
+	}
+	.iframeVideo {
+		width:100%;
+		height:100%;
+	}
+	.mySlides {
+		display:none
+	}
+	.w3-left, .w3-right, .w3-badge {
+		cursor:pointer
+	}
+	.w3-badge {
+		height:10px;
+		width:10px;
+		padding:0
+	}
+</style>
