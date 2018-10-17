@@ -397,8 +397,9 @@ $("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김
 <body>
 	<section id="sidebar">
 		<div class="mainlogo">
-		<a href="/triangleView/views/main/admin/main/mainpage2.jsp#main"><img
-				src="/triangleView/img/admin/blue.png"></a>
+		<a href="<%= request.getContextPath() %>/loginMain">
+								<img id="main_Logo" src="/triangleView/img/admin/mainlogo.png">
+							</a>
 		</div>
 		<div id="list">
 			<ul>

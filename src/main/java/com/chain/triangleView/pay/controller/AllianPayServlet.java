@@ -34,8 +34,15 @@ public class AllianPayServlet extends HttpServlet {
 		int userId = ((Member)request.getSession().getAttribute("loginUser")).getUserNo();
 		int result[] = {0,0};
 		
+		System.out.println("serviceNo::" + serviceNo);
+		System.out.println("allianCode:" + allianCode);
+		System.out.println("rwNo" + rwNo);
+		System.out.println("allianLink" + allianLink);
+		System.out.println("userId" + userId);
 		
 		result = new PayService().insertAllianPay(userId,serviceNo);
+		
+		System.out.println("result::" + result[0]);
 		
 		String page = "";
 		if(result[0] > 0){

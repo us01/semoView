@@ -56,7 +56,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -142,7 +142,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -185,7 +185,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -227,7 +227,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -269,7 +269,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -311,7 +311,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));
@@ -351,7 +351,7 @@ public class BlackMemberDao {
 				BlackMember bm = new BlackMember();
 				bm.setBlackCode(rset.getInt("blackcode"));
 				bm.setUserNo(rset.getInt("userno"));
-				bm.setPhone(rset.getString("phone"));
+				bm.setPhone(rset.getString("copphone"));
 				bm.setNick(rset.getString("nick"));
 				bm.setBlackReason(rset.getString("blackreason"));
 				bm.setBlackTime(rset.getDate("blackTime"));

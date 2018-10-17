@@ -43,7 +43,7 @@ public class CompanyWithdrawServlet extends HttpServlet {
 		int endPage;
 		int listCount = 0;// 한 번에 표시될 페이지가 끝나는 페이지
 
-		ArrayList<Company> com = null;
+		ArrayList<Company> company = null;
 		// 게시판은 1페이지부터 시작한다.
 		currentPage = 1;
 
@@ -60,39 +60,78 @@ public class CompanyWithdrawServlet extends HttpServlet {
 		
 		if(option.equals("userNo")){
 			
-			com = new CompanyService().withdrawUserNo(searchWord);
-			map.put("company", com);
+			company = new CompanyService().withdrawUserNo(searchWord);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			map.put("company", company);
+			
+			
 		}else if(option.equals("userid")){
 			
-		
-		com = new CompanyService().withdrawUserId(searchWord);
-		map.put("company", com);
-		}else if(option.equals("comName")){
-			com = new CompanyService().withdrawCopName(searchWord);
-			map.put("company", com);
-		}else if(option.equals("pName")){
-			com = new CompanyService().withdrawPname(searchWord);
-			map.put("company", com);
-		}else if(option.equals("noCode")){
-			com = new CompanyService().withdrawNoCode(searchWord);
-			map.put("company", com);
-		}else if(option.equals("phone")){
-			com = new CompanyService().withdrawPhone(searchWord);
 			
-			map.put("company", com);
+		company = new CompanyService().withdrawUserId(searchWord);
+		map.put("option",option);
+		map.put("searchWord",searchWord);
+		map.put("company", company);
+		
+		
+		}else if(option.equals("comName")){
+			
+			
+			company = new CompanyService().withdrawCopName(searchWord);
+			map.put("company", company);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			
+			
+		}else if(option.equals("pName")){
+			
+			
+			company = new CompanyService().withdrawPname(searchWord);
+			map.put("company", company);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			
+			
+		}else if(option.equals("noCode")){
+			
+			
+			company = new CompanyService().withdrawNoCode(searchWord);
+			map.put("company", company);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			
+		}else if(option.equals("phone")){
+			
+			
+			company = new CompanyService().withdrawPhone(searchWord);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			map.put("company", company);
+			
+			
 		}else if(option.equals("withdraw_date")){
 			
-			com = new CompanyService().companyWithdrawdate(searchWord);
-			map.put("company", com);
+			company = new CompanyService().companyWithdrawdate(searchWord);
+			map.put("company", company);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			
+			
 		}else if(option.equals("notice_date")){
-			com = new CompanyService().companyNoticedate(searchWord);
-			map.put("company", com);
+			
+			company = new CompanyService().companyNoticedate(searchWord);
+			map.put("company", company);
+			map.put("option",option);
+			map.put("searchWord",searchWord);
+			
 		}else if(option.equals("selectAll")){
 			
 			if (request.getParameter("currentPage") != null) {
 				currentPage = Integer.parseInt(request.getParameter("currentPage"));
 			}
 			listCount = new CompanyService().getWithlistCount();
+			System.out.println(currentPage);
 			maxPage = (int) ((double) listCount / limit + 0.9);
 
 			// 시작페이지 계산
@@ -110,14 +149,15 @@ public class CompanyWithdrawServlet extends HttpServlet {
 			
 			
 			
-			com = new CompanyService().WithsearchAll(currentPage, limit);
-			map.put("option", option);
+			company = new CompanyService().WithsearchAll(currentPage, limit);
+			map.put("searchWord","");
 			map.put("pi", pi);
-			map.put("company", com);
+			map.put("company",company);
 			
 			
 			
 		}
+		
 		
 		
 		response.setContentType("application/json");

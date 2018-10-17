@@ -59,7 +59,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userId"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -115,7 +115,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -170,7 +170,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -225,7 +225,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -280,7 +280,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -335,7 +335,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -390,7 +390,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -446,7 +446,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -502,7 +502,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userId"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -558,7 +558,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -613,7 +613,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -668,7 +668,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -723,7 +723,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -778,7 +778,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -833,7 +833,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -890,7 +890,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -984,7 +984,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setEnroll_date(rset.getDate("enrolldate"));
 				c.setNotice_date(rset.getDate("noticedate"));
@@ -1072,7 +1072,7 @@ public class CompanyDao {
 				c.setUserId(rset.getString("userid"));
 				c.setComName(rset.getString("copname"));
 				c.setpName(rset.getString("offerproduct"));
-				c.setPhone(rset.getString("phone"));
+				c.setPhone(rset.getString("copphone"));
 				c.setNoCode(rset.getInt("noticecode"));
 				c.setWithdraw_date(rset.getDate("withdrawdate"));
 				c.setNotice_date(rset.getDate("noticedate"));

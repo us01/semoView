@@ -88,9 +88,9 @@ body {
 #form-wrapper textarea {
 	padding: 10px 10px;
 	overflow: auto;
-	margin-left:23px;
+	margin-left:28px;
 	position:absolute;
-	width:170px;
+	width:182px;
 	
 }
 /* ----------- Form Button ----------- */

@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 
 public class Payment {
 	
-	private int payDetailCode;
+	private String payDetailCode;
 	private String copName;
 	private int userNo;
 	private int serviceType;
@@ -32,7 +32,7 @@ public class Payment {
 
 
 
-	public Payment(int payDetailCode, String copName, int userNo, int serviceType, int money, int payType, String payDate,
+	public Payment(String payDetailCode, String copName, int userNo, int serviceType, int money, int payType, String payDate,
 			int payStatus, int sumpay) {
 		super();
 		this.payDetailCode = payDetailCode;
@@ -48,7 +48,7 @@ public class Payment {
 
 
 
-	public Payment(int payDetailCode, String copName, int userNo, int serviceType, int money, int payType, String payDate,
+	public Payment(String payDetailCode, String copName, int userNo, int serviceType, int money, int payType, String payDate,
 			int payStatus) {
 		super();
 		this.payDetailCode = payDetailCode;
@@ -61,11 +61,11 @@ public class Payment {
 		this.payStatus = payStatus;
 	}
 
-	public int getPayDetailCode() {
+	public String getPayDetailCode() {
 		return payDetailCode;
 	}
 
-	public void setPayDetailCode(int payDetailCode) {
+	public void setPayDetailCode(String payDetailCode) {
 		this.payDetailCode = payDetailCode;
 	}
 
