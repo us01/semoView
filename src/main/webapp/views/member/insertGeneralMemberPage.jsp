@@ -174,7 +174,7 @@ p{
 			<input type="button" class="btn-success" id="sendVertify" value="전송" style="margin-top: -35px;margin-right: -26px;"></input>
                </span>
                
-                <p id="p2" style="width: 100px; height: 20px; /* display:none; */">
+                <p id="p2" style="width: 100px; height: 20px;  display:none; ">
                 
             </div>
          </div>

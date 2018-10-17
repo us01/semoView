@@ -47,10 +47,10 @@ a {
 	/* 위쪽 메뉴바위에 배경*/
 	float: left;
 	background: #f7323f;
-	max-width: 150px;
+	max-width: 180px;
 	padding: 10px;
 	min-height: 44px;
-	width: 150px;
+	width: 180px;
 	max-height: 44px;
 }
 
@@ -73,7 +73,7 @@ a {
 
     margin-top: 0px;
     padding-top: 20px;
-    padding-left: 650px;
+    padding-left: 620px;
     font-weight:bold;
     color:white;
 
@@ -84,7 +84,7 @@ a {
 	overflow: hidden; /*섹션부분이 값이 html의 범위를 넘어 가면 숨김기능*/
 	font: 12px/20px 돋움;
 	color: #424242;
-	width: 150px;
+	width: 180px;
 	height: 100%;
 	float: left;
 	background: #2A2D33;
@@ -257,6 +257,7 @@ a {
 	display: inline-block;
 }
 
+
 .select-script {
 	position: relative;
 	width: 200px;
@@ -366,8 +367,9 @@ a {
 <body>
 	<section id="sidebar">
 		<div class="mainlogo">
-			<a href="/triangleView/views/main/admin/main/mainpage2.jsp#main"><img
-				src="/triangleView/img/admin/mainlogo.png"></a>
+			<a href="<%= request.getContextPath() %>/loginMain">
+								<img id="main_Logo" src="/triangleView/img/admin/mainlogo.png">
+							</a>
 		</div>
 		<div id="list">
 			<ul>
@@ -505,7 +507,10 @@ a {
 					$table = $("#searchTable");
 					console.log(data);
 					$tbody=$("#tb");
-					$tbody.remove();  
+					$tbody.empty();
+					$div=$("pageBtn");
+					$div.empty();
+					
 					
 					
 				   if(data != null){
@@ -555,13 +560,13 @@ a {
 					
 		               
 		               if(data.pi.maxPage!=0){
-		               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"')>");
+		               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"','"+data.searchWord+"')>");
 		               $Btn1.append("<<");
 		               $("#pageBtn").append($Btn1);
 		               if(data.pi.currentPage <= 1){ 
 		                  $Btn2  = $("<button class='btn' disabled>");    
 		               }else{
-		                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"')>");
+		                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"','"+data.searchWord+"')>");
 		               }
 		               }
 		               $Btn2.append("<");
@@ -579,11 +584,12 @@ a {
 		               if(data.pi.currentPage >= data.pi.maxPage){ 
 		                  $Btn3 = $("<button class='btn' disabled>");
 		               }else{ 
-		                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"')>");
+		                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"','"+data.searchWord+"')>");
 		               } 
 		               $Btn3.append(">");
 		               $("#pageBtn").append($Btn3);
-		               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"')>");
+		               
+		               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"','"+data.searchWord+"')>");
 		               $Btn4.append(">>");
 		               $("#pageBtn").append($Btn4);
 		               
@@ -601,26 +607,31 @@ a {
 	</script>
 	
 	<script>
-	function a(cp,option){
-		  var option = option+"";
-			 /*  var searchWord=searchWord+""; */
+	function a(cp,option,searchWord){
+		  var option = option;
+		  var searchWord = searchWord;
 		      $.ajax({
 				url:"/triangleView/companyWithdraw",
 				type:'post',
 				data:{
+					
+					currentPage:cp,
 					option:option,
-					/* searchWord:searchWord */
+					searchWord:searchWord 
 				},
 				success:function(data){
 					$table = $("#searchTable");
 					console.log(data);
 					$tbody=$("#tb");
-					$tbody.remove();  
+					$tbody.empty();
+					$div=$("#pageBtn");
+					$div.empty();
+					
 					
 					
 				   if(data != null){
 					
-				for(var i=0; data.company.length;i++){
+				for(var i=0; i<data.company.length;i++){
 					
 				
 						
@@ -664,22 +675,25 @@ a {
 						
 			               
 			               if(data.pi.maxPage!=0){
-			               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"')>");
+			               $Btn1 = $("<button class='btn' onclick = a(1,'"+data.option+"','"+data.searchWord+"')>");
 			               $Btn1.append("<<");
 			               $("#pageBtn").append($Btn1);
+			               
+			               
 			               if(data.pi.currentPage <= 1){ 
 			                  $Btn2  = $("<button class='btn' disabled>");    
 			               }else{
-			                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"')>");
+			                  $Btn2  = $("<button class='btn' onclick = a("+(data.pi.currentPage - 1)+",'"+data.option+"','"+data.searchWord+"')>");
 			               }
 			               }
 			               $Btn2.append("<");
 			               $("#pageBtn").append($Btn2);
+			               
 			               for(var p = data.pi.startPage; p <= data.pi.endPage; p++){ 
 			                  if(p == data.pi.currentPage){
 			                     $page = $("<button class='btn' disabled>");
 			                   }else{
-			                      $page = $("<button class='btn' onclick=a("+p+",'"+data.option+"')>");
+			                      $page = $("<button class='btn' onclick=a("+p+",'"+data.option+"','"+data.searchWord+"')>");
 			                  } 
 			                  $page.append(p);
 			                  $("#pageBtn").append($page);
@@ -688,11 +702,13 @@ a {
 			               if(data.pi.currentPage >= data.pi.maxPage){ 
 			                  $Btn3 = $("<button class='btn' disabled>");
 			               }else{ 
-			                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"')>");
+			                  $Btn3 = $("<button class='btn' onclick=a("+(data.pi.currentPage + 1)+",'"+data.option +"','"+data.searchWord+"')>");
 			               } 
 			               $Btn3.append(">");
 			               $("#pageBtn").append($Btn3);
-			               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"')>");
+			               
+			               
+			               $Btn4 = $("<button class='btn' onclick=a("+data.pi.maxPage+",'"+data.option+"','"+data.searchWord+"')>");
 			               $Btn4.append(">>");
 			               $("#pageBtn").append($Btn4);
 	               

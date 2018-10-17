@@ -53,7 +53,7 @@
 		<div class="containChange">
 			<div>
 				<img class="profileOut" id="image_section"
-					src="<%=request.getContextPath()%>/thumbnail_upload/<%=loginUser.getThumbnail() %>"/>
+					src="<%=request.getContextPath()%>/profileImg_upload/<%=loginUser.getThumbnail() %>"/>
 			</div>
 			<div class="containPassword">
 				<div style="    margin-top: 32px;">

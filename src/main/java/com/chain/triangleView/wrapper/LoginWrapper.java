@@ -29,7 +29,7 @@ public class LoginWrapper extends HttpServletRequestWrapper{
 	}
 	
 	public static void main(String[] args){
-		System.out.println(getSha512("123"));
+		System.out.println(getSha512("admin"));
 	}
 
 	private static String getSha512(String pwd) {

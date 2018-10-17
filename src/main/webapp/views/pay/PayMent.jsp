@@ -51,12 +51,12 @@
 }
 
 input#btn {
-	margin-left: -133px;
+	margin-left: -13px;
     width: 300px;
     margin-right: 40px;
     border-radius: 7px;
     background: #ec4a55;
-    color:white;
+    color: white;
 }
 input[type="button"] {
     width: 300px;

@@ -52,7 +52,10 @@ public class PaysMentServlet extends HttpServlet {
 		
 		int result = new PayService().insertAllianPayMent(p,allianCode,rwNo,allianLink);
 		
+		
+		
 		if(result > 0){
+			response.sendRedirect("/triangleView/");
 			
 		}else{
 			System.out.println("안된당!!");

@@ -5,6 +5,11 @@
 	int allianCode = (Integer)request.getAttribute("allianCode");
 	int rwNo = (Integer)request.getAttribute("rwNo");
 	String allianLink = (String)request.getAttribute("allianLink");
+	
+	System.out.print("payCode1" + payCode);
+	System.out.print("allianCode2"+ allianCode);
+	System.out.print("rwNo2" + rwNo);
+	System.out.print("allianLink" + allianLink);
 
 %>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -67,7 +72,7 @@
 						payCode : <%=payCode%>,
 						allianCode : <%=allianCode%>,
 						rwNo : <%=rwNo%>,
-						allianLink : <%=allianLink%>
+						allianLink : '<%=allianLink%>'
 					//기타 필요한 데이터가 있으면 추가 전달
 					}
 				})

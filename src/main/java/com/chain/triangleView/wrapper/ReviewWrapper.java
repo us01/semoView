@@ -27,7 +27,7 @@ public class ReviewWrapper extends HttpServletRequestWrapper{
 	}
 	
 	public static void main(String[] args){
-		System.out.println(getSha512("1"));
+		System.out.println(getSha512("1234"));
 	}
 	
 	private static String getSha512(String searchHash) {

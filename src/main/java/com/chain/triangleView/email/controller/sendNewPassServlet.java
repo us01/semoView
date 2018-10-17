@@ -73,6 +73,9 @@ public class sendNewPassServlet extends HttpServlet {
 			} catch (MessagingException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			
 		}else{

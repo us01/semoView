@@ -203,6 +203,11 @@ public class NoticeService {
 			noticeAllianForm.put("list1", list1);
 			noticeAllianForm.put("list3", list3);
 			noticeAllianForm.put("list4", list4);
+			
+			System.out.println("jlist" + list);
+			System.out.println("jlist1" + list1);
+			System.out.println("jlist3" + list3);
+			System.out.println("jlist4" + list4);
 		}
 		
 		close(con);

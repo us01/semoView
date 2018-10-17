@@ -517,7 +517,7 @@ img.noticePointer:hover{
 					<div class="noticeN">
 					  <%for(int i =0; i <list1.size(); i++){ %>
 						<div class="userN">	
-						<div class="userImg"><img class="userImgBox" src="<%=request.getContextPath()%>/profileImg_upload/<%=list.get(1).getFileName()%>"></div>
+						<div class="userImg"><img class="userImgBox" src="<%= request.getContextPath() %>/profileImg_upload/<%=list.get(0).getFileName()%>"></div>
 						<p class="userNick"><%=list1.get(i).getNick() %></p>
 						<p class="userIntro"><%=list1.get(i).getIntro() %></p>
 						</div>
@@ -526,7 +526,7 @@ img.noticePointer:hover{
 					<div class="noticeY">
 						<%for(int i =0; i < list2.size();i++){%>
 						<div class="userY">	
-						<div class="userImg1"><img class="userImgBox1" src="<%=request.getContextPath()%>/notice_upload/<%=list.get(1).getFileName()%>"></div>
+						<div class="userImg1"><img class="userImgBox1" src="<%= request.getContextPath() %>/profileImg_upload/<%=list.get(0).getFileName()%>"></div>
 						<p class="userNick1"><%=list2.get(i).getNick() %></p>
 						<p class="userIntro1"><%=list2.get(i).getIntro() %></p>
 						</div>

@@ -58,7 +58,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -106,7 +106,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -150,7 +150,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -194,7 +194,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -238,7 +238,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -282,7 +282,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
@@ -516,7 +516,7 @@ public class PaymentDao {
 
 				Payment p = new Payment();
 
-				p.setPayDetailCode(rset.getInt("payDetailCode"));
+				p.setPayDetailCode(rset.getString("payDetailCode"));
 				p.setCopName(rset.getString("copName"));
 				p.setUserNo(rset.getInt("userNo"));
 				p.setServiceType(rset.getInt("serviceType"));
